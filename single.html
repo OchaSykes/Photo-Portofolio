@@ -111,6 +111,21 @@
           <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_4.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
             <a href="#"><img src="images/foto_4.jpg" alt="Image" class="img-fluid"></a>
           </div>
+         <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_5.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_5.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_6.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_6.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_7.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_7.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_8.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_8.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+
+
+          
         </div>
       </div>
     </div>
@@ -142,20 +157,35 @@
   <script src="js/main.js"></script>
 
   <!-- Script for grayscale effect on mobile -->
-  <script>
-    $(document).ready(function(){
-      $('#lightgallery').lightGallery();
+ <!-- Script for grayscale effect on mobile -->
+<script>
+  $(document).ready(function(){
+    $('#lightgallery').lightGallery();
 
-      // Deteksi perangkat mobile
-      if ($(window).width() <= 767) {
-        // Jika di perangkat mobile, gambar akan aktif berwarna saat diklik
-        $('.img-fluid').on('click', function(e) {
-          e.preventDefault(); // Mencegah behavior default
-          $(this).addClass('mobile-active'); // Mengaktifkan filter berwarna
-        });
-      }
-    });
-  </script>
+    // Deteksi perangkat mobile
+    if ($(window).width() <= 767) {
+      // Jika di perangkat mobile, gambar akan aktif berwarna saat diklik
+      $('.img-fluid').each(function(index, element) {
+        var imgSrc = $(element).attr('src');
+        
+        // Mengecek localStorage untuk status klik gambar
+        if (localStorage.getItem(imgSrc) === 'clicked') {
+          $(element).addClass('mobile-active');
+        }
+      });
+
+      $('.img-fluid').on('click', function(e) {
+        e.preventDefault(); // Mencegah behavior default
+        $(this).addClass('mobile-active'); // Mengaktifkan filter berwarna
+
+        // Simpan status klik di localStorage
+        var imgSrc = $(this).attr('src');
+        localStorage.setItem(imgSrc, 'clicked');
+      });
+    }
+  });
+</script>
+
 
 </body>
 </html>
