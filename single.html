@@ -26,6 +26,24 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- Custom CSS for Mobile Responsiveness -->
+  <style>
+    @media (max-width: 767px) {
+      .site-navbar {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .site-menu {
+        display: block;
+        padding: 0;
+      }
+
+      .site-menu li {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -40,27 +58,18 @@
       <div class="site-mobile-menu-body"></div>
     </div>
     
-
-
-
     <header class="site-navbar py-3" role="banner">
-
       <div class="container-fluid">
         <div class="row align-items-center">
-
           <div class="col-6 col-xl-2" data-aos="fade-down">
             <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Photosen</a></h1>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
-
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li><a href="index.html">Home</a></li>
-              
-                  <a href="single.html">Gallery</a>
-                  <ul class="dropdown">
-                  </ul>
-                </li>
+                <a href="single.html">Gallery</a>
+                <ul class="dropdown"></ul>
               </ul>
             </nav>
           </div>
@@ -68,146 +77,61 @@
           <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
             <div class="d-none d-xl-inline-block">
               <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-                <ul class="site-menu js-clone-nav ml-auto list-unstyled d-flex text-right mb-0" data-class="social">
-                  <li>
-                    <a href="https://www.facebook.com/tuodiaa.tuodiaa/" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  </li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/odia-candra-anggara-3ab95129a/" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/ochasykes/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  </li>
+                <li><a href="https://www.facebook.com/tuodiaa.tuodiaa/" class="pl-0 pr-3"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://www.linkedin.com/in/odia-candra-anggara-3ab95129a/" class="pl-3 pr-3"><span class="icon-linkedin"></span></a></li>
+                <li><a href="https://www.instagram.com/ochasykes/" class="pl-3 pr-3"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
 
-            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
-
+            <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+              <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
+            </div>
           </div>
-
         </div>
       </div>
-      
     </header>
 
-
-
-    <div class="site-section"  data-aos="fade">
+    <div class="site-section" data-aos="fade">
       <div class="container-fluid">
-
         <div class="row justify-content-center">
-
           <div class="col-md-7">
             <div class="row mb-5">
-              <div class="col-12 ">
+              <div class="col-12">
                 <h2 class="site-section-heading text-center">Portrait Gallery</h2>
               </div>
             </div>
           </div>
-
         </div>
+
         <div class="row" id="lightgallery">
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/tes.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/tes.jpg" alt="IMage" class="img-fluid"></a>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/tes.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/tes.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_2.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_2.jpg" alt="IMage" class="img-fluid"></a>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_2.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_2.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_3.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_3.jpg" alt="IMage" class="img-fluid"></a>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_3.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_3.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_4.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_4.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_5.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_5.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_6.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_6.jpg" alt="IMage" class="img-fluid"></a>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_4.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_4.jpg" alt="Image" class="img-fluid"></a>
           </div>
 
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_7.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_7.jpg" alt="IMage" class="img-fluid"></a>
+          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_5.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
+            <a href="#"><img src="images/foto_5.jpg" alt="Image" class="img-fluid"></a>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_8.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_8.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_9.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_9.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_10.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_10.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_11.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_11.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_12.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_12.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_13.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_13.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_14.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_14.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_15.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_15.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_16.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_16.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_17.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_17.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_18.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_18.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_19.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_19.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_20.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_20.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_21.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_21.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_22.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_22.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_23.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_23.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_24.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_24.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/foto_25.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_25.jpg" alt="IMage" class="img-fluid"></a>
-          </div>
-         
-         
-        
-        
- 
-         
-         
-         
+
+
+      </div>
     </div>
 
     <div class="footer py-4">
       <div class="container-fluid text-center">
         <p>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script>  |  <i class="icon-heart-o" aria-hidden="true"></i> by <a href="" target="_blank" >Ocha</a>
-
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> | <i class="icon-heart-o" aria-hidden="true"></i> by <a href="" target="_blank">Ocha</a>
         </p>
       </div>
     </div>
-
-    
-
-    
-    
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
@@ -222,18 +146,15 @@
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/aos.js"></script>
-
   <script src="js/picturefill.min.js"></script>
   <script src="js/lightgallery-all.min.js"></script>
   <script src="js/jquery.mousewheel.min.js"></script>
-
   <script src="js/main.js"></script>
-  
+
   <script>
     $(document).ready(function(){
       $('#lightgallery').lightGallery();
     });
   </script>
-
 </body>
 </html>
