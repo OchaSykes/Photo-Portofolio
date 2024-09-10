@@ -167,13 +167,14 @@
     });
 
     // Deteksi perangkat mobile
-    if ($(window).width() <= 767) {
-      // Jika di perangkat mobile, aktifkan gambar berwarna saat di-klik (lightGallery detail view)
-      $('#lightgallery').on('onBeforeOpen.lg', function() {
-        // Ubah gambar yang akan dilihat menjadi berwarna di modal lightGallery
-        $('.lg-image').css('filter', 'none');
-      });
-    }
+    if (window.matchMedia("(max-width: 767px)").matches) {
+  $('#lightgallery').on('onAfterSlide.lg', function(event, index, fromTouch, fromThumb) {
+    setTimeout(function() {
+      $('.lg-current .lg-image').css('filter', 'none');
+    }, 100);
+  });
+}
+
   });
 </script>
 
