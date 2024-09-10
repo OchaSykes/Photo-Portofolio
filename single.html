@@ -21,23 +21,24 @@
 
   <!-- Custom CSS for Mobile Responsiveness and Grayscale Effect -->
   <style>
-    /* Efek hitam putih secara default */
-    .img-fluid {
-      filter: grayscale(100%);
-      transition: filter 0.3s ease;
-    }
+   /* Efek hitam putih secara default */
+.img-fluid {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
 
-    /* Saat di perangkat mobile dan gambar di klik, berwarna */
-    .img-fluid.mobile-active {
-      filter: none;
-    }
+/* Saat di perangkat mobile dan gambar di klik, berwarna */
+.img-fluid.mobile-active {
+  filter: none;
+}
 
-    /* Jika di hover pada layar besar, akan berwarna */
-    @media (min-width: 768px) {
-      .img-fluid:hover {
-        filter: none;
-      }
-    }
+/* Jika di hover pada layar besar, akan berwarna */
+@media (min-width: 768px) {
+  .img-fluid:hover {
+    filter: none;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -158,33 +159,24 @@
 
   <!-- Script for grayscale effect on mobile -->
  <!-- Script for grayscale effect on mobile -->
+<!-- Script for lightGallery and grayscale effect on mobile -->
 <script>
-  $(document).ready(function(){
-    $('#lightgallery').lightGallery();
+  $(document).ready(function() {
+    $('#lightgallery').lightGallery({
+      selector: '.item'
+    });
 
     // Deteksi perangkat mobile
     if ($(window).width() <= 767) {
-      // Jika di perangkat mobile, gambar akan aktif berwarna saat diklik
-      $('.img-fluid').each(function(index, element) {
-        var imgSrc = $(element).attr('src');
-        
-        // Mengecek localStorage untuk status klik gambar
-        if (localStorage.getItem(imgSrc) === 'clicked') {
-          $(element).addClass('mobile-active');
-        }
-      });
-
-      $('.img-fluid').on('click', function(e) {
-        e.preventDefault(); // Mencegah behavior default
-        $(this).addClass('mobile-active'); // Mengaktifkan filter berwarna
-
-        // Simpan status klik di localStorage
-        var imgSrc = $(this).attr('src');
-        localStorage.setItem(imgSrc, 'clicked');
+      // Jika di perangkat mobile, aktifkan gambar berwarna saat di-klik (lightGallery detail view)
+      $('#lightgallery').on('onBeforeOpen.lg', function() {
+        // Ubah gambar yang akan dilihat menjadi berwarna di modal lightGallery
+        $('.lg-image').css('filter', 'none');
       });
     }
   });
 </script>
+
 
 
 </body>
