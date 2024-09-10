@@ -7,40 +7,35 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
-
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
   <link rel="stylesheet" href="css/lightgallery.min.css">    
-
   <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
   <link rel="stylesheet" href="css/swiper.css">
-
   <link rel="stylesheet" href="css/aos.css">
-
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Custom CSS for Mobile Responsiveness -->
+  <!-- Custom CSS for Mobile Responsiveness and Grayscale Effect -->
   <style>
-    @media (max-width: 767px) {
-      .site-navbar {
-        text-align: center;
-        padding: 10px;
-      }
+    /* Efek hitam putih secara default */
+    .img-fluid {
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
 
-      .site-menu {
-        display: block;
-        padding: 0;
-      }
+    /* Saat di perangkat mobile dan gambar di klik, berwarna */
+    .img-fluid.mobile-active {
+      filter: none;
+    }
 
-      .site-menu li {
-        margin-bottom: 10px;
+    /* Jika di hover pada layar besar, akan berwarna */
+    @media (min-width: 768px) {
+      .img-fluid:hover {
+        filter: none;
       }
     }
   </style>
@@ -116,12 +111,7 @@
           <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_4.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
             <a href="#"><img src="images/foto_4.jpg" alt="Image" class="img-fluid"></a>
           </div>
-
-          <div class="col-6 col-sm-4 col-md-3 col-xl-3 item" data-aos="fade" data-src="images/foto_5.jpg" data-sub-html="<h4>Fading Light</h4><p></p>">
-            <a href="#"><img src="images/foto_5.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-
-
+        </div>
       </div>
     </div>
 
@@ -151,10 +141,21 @@
   <script src="js/jquery.mousewheel.min.js"></script>
   <script src="js/main.js"></script>
 
+  <!-- Script for grayscale effect on mobile -->
   <script>
     $(document).ready(function(){
       $('#lightgallery').lightGallery();
+
+      // Deteksi perangkat mobile
+      if ($(window).width() <= 767) {
+        // Jika di perangkat mobile, gambar akan aktif berwarna saat diklik
+        $('.img-fluid').on('click', function(e) {
+          e.preventDefault(); // Mencegah behavior default
+          $(this).addClass('mobile-active'); // Mengaktifkan filter berwarna
+        });
+      }
     });
   </script>
+
 </body>
 </html>
